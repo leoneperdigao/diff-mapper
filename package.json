@@ -1,9 +1,9 @@
 {
   "name": "diff-mapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generic tool to find differences between javaScript objects",
   "main": "lib/diffMapper.js",
-  "types" : "lib/diffMapper.d.ts",
+  "types": "lib/diffMapper.d.ts",
   "scripts": {
     "lint": "eslint --ext .ts src",
     "build": "tsc",
