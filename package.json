@@ -1,0 +1,48 @@
+{
+  "name": "diff-mapper",
+  "version": "1.0.0",
+  "description": "Generic tool to find differences between javaScript objects",
+  "main": "diffMapper.js",
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoneperdigao/diff-mapper.git"
+  },
+  "keywords": [
+    "npm",
+    "npm-diff-mapper",
+    "javascript",
+    "compare",
+    "vanilla",
+    "typescript"
+  ],
+  "author": "Leone Perdigão",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/leoneperdigao/diff-mapper/issues"
+  },
+  "homepage": "https://github.com/leoneperdigao/diff-mapper#readme",
+  "devDependencies": {
+    "@types/jest": "24.0.23",
+    "@types/node": "^12.12.29",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "husky": "3.0.9",
+    "jest": "24.9.0",
+    "ts-jest": "24.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "typescript": "^3.8.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsc",
+      "pre-push": "npm run lint && npm test"
+    }
+  }
+}
