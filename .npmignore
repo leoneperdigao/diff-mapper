@@ -2,11 +2,11 @@
 node_modules
 __tests__
 src/
-.jest.config.js
+jest.config.js
+tsconfig.json
 .coverage
 .badges
 .gitignore
 .eslintrc
 .editorconfig
-tsconfig.json
 .package-lock.json
