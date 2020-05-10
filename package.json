@@ -2,18 +2,24 @@
   "name": "diff-mapper",
   "version": "1.0.1",
   "description": "Generic tool to find differences between javaScript objects",
+  "author": "Leone Perdigão",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/leoneperdigao/diff-mapper#readme",
   "main": "lib/diffMapper.js",
   "types": "lib/diffMapper.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leoneperdigao/diff-mapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leoneperdigao/diff-mapper/issues"
+  },
   "scripts": {
     "lint": "eslint --ext .ts src",
     "build": "tsc",
     "test": "jest",
     "test:coverage": "npm test -- --coverage",
     "test:badges": "npm run test:coverage  && jest-coverage-badges --input ./.coverage/coverage-summary.json --output ./.badges"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/leoneperdigao/diff-mapper.git"
   },
   "keywords": [
     "npm",
@@ -23,12 +29,6 @@
     "vanilla",
     "typescript"
   ],
-  "author": "Leone Perdigão",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/leoneperdigao/diff-mapper/issues"
-  },
-  "homepage": "https://github.com/leoneperdigao/diff-mapper#readme",
   "devDependencies": {
     "@types/jest": "^25.2.1",
     "@types/node": "^13.13.5",

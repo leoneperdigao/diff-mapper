@@ -2,6 +2,13 @@
 
 diff-mapper is a JavaScript vanilla module for mapping differences between objects.
 
+[![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
+
+![Coverage lines](https://raw.githubusercontent.com/leoneperdigao/diff-mapper/8505f097365b266d5c583652fa149ffe0cf4cc02/.badges/badge-lines.svg)
+![Coverage functions](https://raw.githubusercontent.com/leoneperdigao/diff-mapper/8505f097365b266d5c583652fa149ffe0cf4cc02/.badges/badge-functions.svg)
+![Coverage branches](https://raw.githubusercontent.com/leoneperdigao/diff-mapper/8505f097365b266d5c583652fa149ffe0cf4cc02/.badges/badge-branches.svg)
+![Coverage statements](https://raw.githubusercontent.com/leoneperdigao/diff-mapper/8505f097365b266d5c583652fa149ffe0cf4cc02/.badges/badge-statements.svg)
+
 ## Installation
 
 Use the package manager [npm](https://www.npmjs.com/get-npm) to install diff-mapper.
