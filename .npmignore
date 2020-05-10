@@ -1,5 +1,12 @@
 # .npmignore
 node_modules
 __tests__
-.badges
+src/
+.jest.config.js
 .coverage
+.badges
+.gitignore
+.eslintrc
+.editorconfig
+.tsconfig.json
+.package-lock.json
