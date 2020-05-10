@@ -6,7 +6,7 @@ export enum ValueDiffType {
 }
 
 export interface DiffMapResult {
-  type: string;
+  type: ValueDiffType;
   currentValue: any;
   newValue: any;
 }
@@ -47,7 +47,7 @@ export default class DiffMapper {
     return result;
   }
 
-  private static compareValues(actual: any, changed: any): string {
+  private static compareValues(actual: any, changed: any): ValueDiffType {
     if (actual === changed) {
       return ValueDiffType.UNCHANGED;
     }

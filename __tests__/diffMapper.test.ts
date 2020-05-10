@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import diffMapper from '../src/diffMapper';
 
 const testInput = {
@@ -20,10 +21,28 @@ const testInput = {
 };
 
 describe('DiffMapper', () => {
-
   test('Should return an empty map, no diff', () => {
     const diff = diffMapper.map({}, {});
     expect(diff).toEqual({});
+  });
+
+  test('Should return a diff map, unchanged property', () => {
+    const object1 = { a: 1 };
+    const object2 = { a: 1 };
+    const diff = diffMapper.map(object1, object2);
+    expect(diff).toEqual({ a: { type: 'UNCHANGED', currentValue: 1, newValue: 1 } });
+  });
+
+  test('Should return a diff map, added property and removed other', () => {
+    const object1 = { a: 1 };
+    const object2 = { b: 1 };
+    const diff = diffMapper.map(object1, object2);
+    expect(diff).toEqual(
+      {
+        a: { type: 'DELETED', currentValue: 1, newValue: undefined },
+        b: { type: 'CREATED', currentValue: undefined, newValue: 1 },
+      },
+    );
   });
 
   test('Should return an empty map, no diff, array', () => {
@@ -135,5 +154,4 @@ describe('DiffMapper', () => {
       },
     });
   });
-
 });
