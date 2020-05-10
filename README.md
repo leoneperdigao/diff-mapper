@@ -159,6 +159,12 @@ console.info(diff);
   5: { type: 'CREATED', currentValue: undefined, newValue: 6 },
 }
 ```
+## Utils
+
+```typescript
+diffMapper.toArray - returns DiffMapResult represented as an array
+diffMapper.toString - returns DiffMapResult stringified
+```
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

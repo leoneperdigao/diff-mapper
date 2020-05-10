@@ -47,6 +47,32 @@ export default class DiffMapper {
     return result;
   }
 
+  /**
+   *
+   * @param diff
+   * @returns DiffMapResult represented as an array
+   * @throws an error if no diff result is passed as parameter
+   */
+  public static toArray(diff: DiffMapResult): [string, DiffMapResult][] {
+    if (!diff) {
+      throw Error('Invalid argument. Expected diff result to be transformed in array.');
+    }
+    return Object.entries(diff);
+  }
+
+  /**
+   *
+   * @param diff
+   * @returns DiffMapResult stringified
+   * @throws an error if no diff result is passed as parameter
+   */
+  public static toString(diff: DiffMapResult): string {
+    if (!diff) {
+      throw Error('Invalid argument. Expected diff result to be stringified.');
+    }
+    return JSON.stringify(diff);
+  }
+
   private static compareValues(actual: any, changed: any): ValueDiffType {
     if (actual === changed) {
       return ValueDiffType.UNCHANGED;

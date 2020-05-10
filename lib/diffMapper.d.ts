@@ -5,7 +5,7 @@ export declare enum ValueDiffType {
     UNCHANGED = "UNCHANGED"
 }
 export interface DiffMapResult {
-    type: string;
+    type: ValueDiffType;
     currentValue: any;
     newValue: any;
 }

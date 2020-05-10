@@ -1,5 +1,4 @@
-/* eslint-disable no-console */
-import diffMapper from '../src/diffMapper';
+import diffMapper, { DiffMapResult } from '../src/diffMapper';
 
 const testInput = {
   a: 'i am unchanged',
@@ -153,5 +152,42 @@ describe('DiffMapper', () => {
         newValue: new Date('2020.05.04'),
       },
     });
+  });
+
+  test('Should convert map result to an array', () => {
+    const object1 = { a: 1 };
+    const object2 = { b: 1 };
+    const diff = diffMapper.map(object1, object2);
+    expect(diffMapper.toArray(diff)).toEqual(
+      [
+        ['a', { type: 'DELETED', currentValue: 1, newValue: undefined }],
+        ['b', { type: 'CREATED', currentValue: undefined, newValue: 1 }],
+      ],
+    );
+  });
+
+  test('Should throw an error for toArray, no diff given', () => {
+    expect.assertions(1);
+    try {
+      diffMapper.toArray(undefined as unknown as DiffMapResult);
+    } catch (err) {
+      expect(err.message).toEqual('Invalid argument. Expected diff result to be transformed in array.');
+    }
+  });
+
+  test('Should convert map result to an JSON serializable string', () => {
+    const object1 = { a: 1 };
+    const object2 = { b: 1 };
+    const diff = diffMapper.map(object1, object2);
+    expect(diffMapper.toString(diff)).toEqual(JSON.stringify(diff));
+  });
+
+  test('Should throw an error for toString, no diff given', () => {
+    expect.assertions(1);
+    try {
+      diffMapper.toString(undefined as unknown as DiffMapResult);
+    } catch (err) {
+      expect(err.message).toEqual('Invalid argument. Expected diff result to be stringified.');
+    }
   });
 });
