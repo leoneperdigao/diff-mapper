@@ -1,6 +1,6 @@
 # diff-mapper
 
-diff-mapper is a JavaScript vanilla module for mapping differences between objects.
+diff-mapper is a npm module writeen in Typescript for mapping differences between objects. Diff-mapper is a vanilla Javascript module and has no dependencies.
 
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
@@ -19,7 +19,7 @@ npm i diff-mapper
 ## Usage
 
 ```typescript
-import diffMapper, { DiffMapResult, ValueDiffType } from 'diff-mapper';
+import diffMapper from 'diff-mapper';
 
 const object1 = { a: 1 };
 const object2 = { a: 1 };
@@ -32,6 +32,8 @@ console.info(diff);
 
 #### 1 - Simple object diff, unchanged property
 ```typescript
+import diffMapper from 'diff-mapper';
+
 const object1 = { a: 1 };
 const object2 = { a: 1 };
 const diff = diffMapper.map(object1, object2);
@@ -41,6 +43,8 @@ console.info(diff);
 
 #### 2 - Simple object diff, added property and removed other
 ```typescript
+import diffMapper from 'diff-mapper';
+
 const object1 = { a: 1 };
 const object2 = { b: 1 };
 const diff = diffMapper.map(object1, object2);
@@ -53,7 +57,7 @@ console.info(diff);
 
 #### 3 - Nested objects, supporting changing types
 ```typescript
-import diffMapper, { DiffMapResult, ValueDiffType } from 'diff-mapper';
+import diffMapper from 'diff-mapper';
 
 const object1 = {
   a: 'i am unchanged',
@@ -153,7 +157,7 @@ console.info(diff);
 ```
 #### 4 - Arrays
 ```typescript
-import diffMapper, { DiffMapResult } from 'diff-mapper';
+import diffMapper from 'diff-mapper';
 
 const diff = diffMapper.map([1, 2, 3], [1, 2, 3, 4, 5, 6]);
 console.info(diff);
