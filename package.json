@@ -7,7 +7,9 @@
   "scripts": {
     "lint": "eslint --ext .ts src",
     "build": "tsc",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "npm test -- --coverage",
+    "test:badges": "npm run test:coverage  && jest-coverage-badges --input ./.coverage/coverage-summary.json --output ./.badges"
   },
   "repository": {
     "type": "git",
@@ -37,6 +39,7 @@
     "eslint-plugin-import": "^2.20.1",
     "husky": "^4.2.5",
     "jest": "^26.0.1",
+    "jest-coverage-badges": "^1.1.2",
     "ts-jest": "^25.5.1",
     "typescript": "^3.8.3"
   },
