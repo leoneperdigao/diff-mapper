@@ -9,11 +9,6 @@
     ],
     "moduleResolution": "node",
     "baseUrl": "src",
-    "paths": {
-      "codecommit-go-prd-mra-commons/lib/*": [
-        "*"
-      ]
-    },
     "declaration": true,
     "strict": true,
     "noImplicitAny": true,
@@ -36,6 +31,5 @@
     "node_modules",
     "lib",
     "__tests__",
-    "__mocks__"
   ]
 }

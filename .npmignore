@@ -8,5 +8,5 @@ src/
 .gitignore
 .eslintrc
 .editorconfig
-.tsconfig.json
+tsconfig.json
 .package-lock.json
