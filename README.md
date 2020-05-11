@@ -18,14 +18,14 @@ npm i diff-mapper
 ```
 ## Usage
 
+### ES6
 ```typescript
-import diffMapper from 'diff-mapper';
+import diffMapper, { DiffMapResult, ValueDiffType } from 'diff-mapper';
+```
 
-const object1 = { a: 1 };
-const object2 = { a: 1 };
-const diff = diffMapper.map(object1, object2);
-console.info(diff);
-{ a: { type: 'UNCHANGED', currentValue: 1, newValue: 1 } }
+### CommonJS
+```typescript
+const diffMapper = require('diff-mapper').default;
 ```
 
 ## Examples
@@ -170,6 +170,23 @@ console.info(diff);
   5: { type: 'CREATED', currentValue: undefined, newValue: 6 },
 }
 ```
+## Types
+
+### ValueDiffType
+| Property      | Type          | Format      |
+| ------------- |:-------------:| -----------:|
+| UNCHANGED     | string        | 'UNCHANGED' |
+| CREATED       | string        | 'CREATED'   |
+| UPDATED       | string        | 'UPDATED'   |
+| DELETED       | string        | 'DELETED'   |
+
+### DiffMapResult
+| Property      | Type          | Format                                       |
+| ------------- |:-------------:| -------------------------------------------: |
+| type          | ValueDiffType | 'UNCHANGED', 'CREATED', 'UPDATED', 'DELETED' |
+| currentValue  | any           | any                                          |
+| newValue      | any           | any                                          |
+
 ## Utils
 
 ```typescript
