@@ -1,6 +1,6 @@
 # diff-mapper
 
-diff-mapper is a npm module written in Typescript for mapping differences between objects. Diff-mapper is a vanilla Javascript module thus has no dependencies.
+diff-mapper is a npm module written in Typescript for mapping differences between objects. Diff-mapper is a vanilla Javascript module thus it has no dependencies.
 
 [![TypeScript](https://badges.frapsoft.com/typescript/code/typescript.svg?v=101)](https://github.com/ellerbrock/typescript-badges/)
 
